@@ -81,13 +81,13 @@ public final class IterativeCrossValidatedMahoutKNNRecommenderEvaluator {
 	public static final long SEED = 2048L;
 
 	/**
-	 * Utility classes should not have a public or default constructor.
+	 * Construtor da classe
 	 */
 	private IterativeCrossValidatedMahoutKNNRecommenderEvaluator() {
 	}
 
 	/**
-	 * Main method. Parameter is not used.
+	 * Método principal responsável inicializar as funcionalidades
 	 *
 	 * @param args
 	 *            the arguments (not used)
