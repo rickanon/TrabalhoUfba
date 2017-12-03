@@ -106,19 +106,8 @@ public final class IterativeCrossValidatedMahoutKNNRecommenderEvaluator {
 	evaluate(nFolds, modelPath, recPath);
 	}
 
-	/**
-	 * Downloads a dataset and stores the splits generated from it.
-	 *
-	 * @param url
-	 *            url where dataset can be downloaded from
-	 * @param nFolds
-	 *            number of folds
-	 * @param inFile
-	 *            file to be used once the dataset has been downloaded
-	 * @param folder
-	 *            folder where dataset will be stored
-	 * @param outPath
-	 *            path where the splits will be stored
+	/** 
+	 Faz download 
 	 */
 	public static void prepareSplits(final String url, final int nFolds, final String inFile, final String folder,
 			final String outPath) {
@@ -148,14 +137,6 @@ public final class IterativeCrossValidatedMahoutKNNRecommenderEvaluator {
 	}
 //
 //	/**
-//	 * 
-//	 *
-//	 * @param nFolds
-//	 *            number of folds
-//	 * @param inPath
-//	 *            path where training and test models have been stored
-//	 * @param outPath
-//	 *            path where recommendation files will be stored
 //	 */
 	public static void recommend(final int nFolds, final String inPath, final String outPath) {
 		for (int i = 0; i < nFolds; i++) {
@@ -206,17 +187,7 @@ public final class IterativeCrossValidatedMahoutKNNRecommenderEvaluator {
 	}
 
 	/**
-	 * Prepares the strategies to be evaluated with the recommenders already
-	 * generated.
-	 *
-	 * @param nFolds
-	 *            number of folds
-	 * @param splitPath
-	 *            path where splits have been stored
-	 * @param recPath
-	 *            path where recommendation files have been stored
-	 * @param outPath
-	 *            path where the filtered recommendations will be stored
+
 	 */
 	@SuppressWarnings("unchecked")
 	public static void prepareStrategy(final int nFolds, final String splitPath, final String recPath,
@@ -269,14 +240,8 @@ public final class IterativeCrossValidatedMahoutKNNRecommenderEvaluator {
 	}
 
 	/**
-	 * Evaluates the recommendations generated in previous steps.
-	 *
-	 * @param nFolds
-	 *            number of folds
-	 * @param splitPath
-	 *            path where splits have been stored
-	 * @param recPath
-	 *            path where recommendation files have been stored
+	
+	
 	 */
 	public static void evaluate(final int nFolds, final String splitPath, final String recPath) {
 		double ndcgRes = 0.0;
