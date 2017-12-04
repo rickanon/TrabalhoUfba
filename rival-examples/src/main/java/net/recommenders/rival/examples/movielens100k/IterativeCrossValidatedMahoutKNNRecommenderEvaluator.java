@@ -107,7 +107,7 @@ public final class IterativeCrossValidatedMahoutKNNRecommenderEvaluator {
 	}
 
 	/** 
-	 Faz download dos datasets e preprar os seeds caso não consiga criar o diretorio é sinalizado o mesmo.
+	 Faz download dos datasets e prepara os seeds caso não consiga criar o diretorio é sinalizado o erro.
 	 */
 	public static void prepareSplits(final String url, final int nFolds, final String inFile, final String folder,
 			final String outPath) {
@@ -137,7 +137,7 @@ public final class IterativeCrossValidatedMahoutKNNRecommenderEvaluator {
 	}
 //
 //		
-// Cria a base de tesde e treinamento de acordo com a quantidade de folds
+// Cria a base de tesde e treinamento de acordo com a quantidade de folds, além disso ele cria a recomendação e salva e
 //	 */
 	public static void recommend(final int nFolds, final String inPath, final String outPath) {
 		for (int i = 0; i < nFolds; i++) {
@@ -188,7 +188,7 @@ public final class IterativeCrossValidatedMahoutKNNRecommenderEvaluator {
 	}
 
 	/**
-
+	// Prepara a estrategia d de traino e teste com base no número de folds baseado no arquivos  baixados
 	 */
 	@SuppressWarnings("unchecked")
 	public static void prepareStrategy(final int nFolds, final String splitPath, final String recPath,
@@ -242,7 +242,7 @@ public final class IterativeCrossValidatedMahoutKNNRecommenderEvaluator {
 
 	/**
 	
-	
+	// Após realizar avaliação ele avalia o retorno obtido com base nas metricas e com base no  total de fold retorna o resultado da avalição
 	 */
 	public static void evaluate(final int nFolds, final String splitPath, final String recPath) {
 		double ndcgRes = 0.0;
