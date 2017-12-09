@@ -277,3 +277,40 @@ public final class IterativeCrossValidatedMahoutKNNRecommenderEvaluator {
 
 	}
 }
+
+
+//http://files.grouplens.org/datasets/movielens/ml-100k-README.txt
+//
+//Main : 
+//
+//Baixa do repositorio o dataset
+//Organiza em pastas os files e models que serão utilizados e começa a inicializar o projeto 
+//
+//
+//
+//PrepareSplits
+//
+//Baixa o arquivo do site do movielens e da unzip depois disso set o arquivo principal e converte para o tipo Movielens
+//
+//MovielensParser : 
+//
+//Instancia um novo objeto do tipo Movielens  - Falar sobre o que é o movielens e um resumo do projeto
+//
+//
+//IterativeCrossValidationSplitter
+//
+//recommender:
+//
+//recommender = grb.buildRecommender(trainModel, recommenderClass, similarityClass, neighborhoodSize);
+//
+//Cria uma base de teste e treino. Após isso ele chama o recomender que pega o resultado da base de treino  e chama o  build recomender, com base nisso ele cria um arquivo de recomendação pra cada base de treino.	
+//
+//
+//prepareStrategy
+//Instancia os arquivos de treinamento, teste e recomendação como tipo de model pra pode fazer a analise de estrategia para avaliar se os itens são passiveis de tal rank e podem ser utilizados . 
+//
+//
+//Evaluate :
+//
+//Avalia os resusltados de teste e recomendação e calcula as métricas de acordo com os limites estabelicido e por fim divide o resultado da métrica na posição X pelo numero de folds e obtem se ua " 
+
